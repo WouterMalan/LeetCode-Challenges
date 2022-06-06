@@ -5,11 +5,11 @@
     
     var intToRoman = function(N) {
         let ans = ""
-        for (let i = 0; N; i++)
+        for (let i = 0; N; i++)// loop through the array of values and roman numerals until N is 0
         {
-            while (N >= val[i]){
-                ans += rom[i]
-                N -= val[i]
+            while (N >= val[i]){// while N is greater than the value at index i
+                ans += rom[i]// add the roman numeral at index i to the answer
+                N -= val[i]// subtract the value at index i from N
             }
         }
         return ans
