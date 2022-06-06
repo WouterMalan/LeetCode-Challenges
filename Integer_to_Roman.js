@@ -1,13 +1,18 @@
 //integer to roman
-function intToRoman(num) {
-    let roman = [["I", 1], ["IV", 4], ["V", 5], ["IX", 9], ["X", 10], ["XL", 40], ["L", 50], ["XC", 90], ["C", 100], ["CD", 400], ["D", 500], ["CM", 900], ["M", 1000]];
-    let result = "";
-    for (let i = 0; i < roman.length; i++) {
-        while (num >= roman[i][1]){
-            result += roman[i][0];
-            num -= roman[i][1];
+
+    const val = [1000,900,500,400,100,90,50,40,10,9,5,4,1]
+    const rom = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"]
+    
+    var intToRoman = function(N) {
+        let ans = ""
+        for (let i = 0; N; i++)
+        {
+            while (N >= val[i]){
+                ans += rom[i]
+                N -= val[i]
+            }
         }
-    }
-    return result;
-}
-console.log(intToRoman(3999));
+        return ans
+        
+    };
+console.log(intToRoman(11));
