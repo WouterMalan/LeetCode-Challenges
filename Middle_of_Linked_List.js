@@ -14,3 +14,27 @@ var middleNode = function(head) {
     }
     return slow;// return the slow pointer
 }
+
+//  var middleNode = function(head) {
+//      let count = 0;
+
+//      const dummyHead = new ListNode(null);
+//         dummyHead.next = head;// create a dummy head node
+//         let head1 = dummyHead;// create a head1 pointer
+//         let head2 = dummyHead;// create a head2 pointer
+
+//         while(head1.next!==null){// while head1 pointer is not null
+//             head1 = head1.next;// move head1 pointer to the next node
+//             count++;// add 1 to the count
+//         }
+//     console.log(count);
+//     if(count %2 === 0){// if the count is even
+//         count++;// add 1 to the count
+//     }
+//     let i = 0;
+//     while(i<count/2){// while i is less than the count
+//         head2 = head2.next;// move head2 pointer to the next node
+//         i++;// add 1 to i
+//     }
+//     return head2;// return the head2 pointer
+//  }
